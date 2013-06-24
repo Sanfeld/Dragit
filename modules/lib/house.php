@@ -29,7 +29,7 @@
     $loc = httpget("lo");
     if ($loc == ""){
         $sql = "SELECT * FROM ".db_prefix("housekeys")." WHERE ownerid=".$session['user']['acctid']." AND location='".$session['user']['location']."'";
-        $result = db_query($sql);
+        $result = db_query($sql); var_dump($result);
         $rownumber = mysql_num_rows ($result);
         $i = 0;
         $row = array();
